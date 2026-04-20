@@ -1,0 +1,31 @@
+:root {
+  background: #ffffff;
+
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Golos Text', sans-serif;
+  --font-sans: 'Geist', sans-serif;
+
+  /* Spacings */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-36: 36px;
+  --spacing-40: 40px;
+  --spacing-44: 44px;
+
+  /* Border Radius */
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-24: 24px;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: #171717;
+}

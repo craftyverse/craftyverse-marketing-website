@@ -1,0 +1,44 @@
+{
+  "name": "craftyverse-marketing-website",
+  "version": "1.0.0",
+  "description": "This is the marketing website for the Craftyvers platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:local": "next dev",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "build": "next build",
+    "start": "next start",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craftyverse/craftyverse-marketing-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craftyverse/craftyverse-marketing-website/issues"
+  },
+  "homepage": "https://github.com/craftyverse/craftyverse-marketing-website#readme",
+  "dependencies": {
+    "googleapis": "^171.4.0",
+    "next": "^16.2.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "sass": "^1.99.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.4",
+    "husky": "^9.1.7",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3"
+  }
+}
