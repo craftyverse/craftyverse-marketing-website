@@ -1,0 +1,20 @@
+.form {
+  width: 100%;
+
+  fieldset {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--spacing-24);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    container-type: inline-size;
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.64;
+    }
+  }
+}

@@ -1,0 +1,212 @@
+.mainTitle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-24);
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding: var(--spacing-40) var(--spacing-24);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgb(28 25 23 / 7%) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(28 25 23 / 7%) 1px, transparent 1px);
+    background-position: center;
+    background-size: 96px 96px;
+    mask-image: radial-gradient(
+      ellipse at center,
+      rgb(0 0 0 / 90%) 0%,
+      rgb(0 0 0 / 78%) 42%,
+      transparent 82%
+    );
+    -webkit-mask-image: radial-gradient(
+      ellipse at center,
+      rgb(0 0 0 / 90%) 0%,
+      rgb(0 0 0 / 78%) 42%,
+      transparent 82%
+    );
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .headline {
+    max-width: 1050px;
+    margin: 0;
+    color: #1c1917;
+    font-family: var(--font-primary);
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 88px;
+    letter-spacing: 0;
+    text-align: center;
+    background: linear-gradient(90deg, #1c1917 0%, #a8a29e 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .supportingText {
+    max-width: 720px;
+    margin: 0;
+    color: #57534e;
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .journeyTitle {
+    max-width: 760px;
+    margin: 0;
+    color: #1c1917;
+    font-family: var(--font-primary);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .journeyText {
+    max-width: 700px;
+    margin: 0;
+    color: #57534e;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .waitlistFormLayer {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+  }
+
+  .waitlistDivider {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 870px);
+    height: 1px;
+    margin-top: var(--spacing-16);
+    background: #e7e5e4;
+  }
+
+  .waitlistBenefitsContainer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: min(100%, 1120px);
+    padding: 0;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-32);
+  }
+
+  .waitlistBenefit {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: var(--spacing-8);
+    color: #57534e;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  .waitlistBenefitIcon {
+    display: inline-flex;
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #22c55e;
+    color: #ffffff;
+
+    svg {
+      width: 10px;
+      height: 10px;
+      stroke-width: 4;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .mainTitle {
+    .headline {
+      max-width: 560px;
+      font-size: 48px;
+      line-height: 52px;
+    }
+
+    .journeyTitle {
+      max-width: 560px;
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    .waitlistBenefits {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-16);
+      width: min(100%, 560px);
+      margin-top: var(--spacing-24);
+    }
+
+    .waitlistBenefit {
+      font-size: 14px;
+      line-height: 20px;
+      white-space: normal;
+    }
+
+    .waitlistBenefitIcon {
+      width: 28px;
+      height: 28px;
+      flex-basis: 28px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .mainTitle {
+    .headline {
+      font-size: 38px;
+      line-height: 42px;
+    }
+
+    .journeyTitle {
+      font-size: 30px;
+      line-height: 34px;
+    }
+  }
+}

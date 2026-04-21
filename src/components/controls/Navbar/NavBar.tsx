@@ -1,7 +1,7 @@
-import { Button } from '@/components/common/Button';
-import type { DropdownItem } from '@/components/common/Dropdown';
-import styles from '@/components/common/Navbar/Navbar.module.scss';
-import { NavBarItem } from '@/components/common/Navbar/NavBarItem/NavBarItem';
+import { Button } from '@/components/controls/Button';
+import type { DropdownItem } from '@/components/controls/Dropdown';
+import styles from '@/components/controls/Navbar/Navbar.module.scss';
+import { NavBarItem } from '@/components/controls/Navbar/NavBarItem/NavBarItem';
 import { Logo } from '@/illustrations/Logo';
 import { ArrowRight } from 'lucide-react';
 import React from 'react';

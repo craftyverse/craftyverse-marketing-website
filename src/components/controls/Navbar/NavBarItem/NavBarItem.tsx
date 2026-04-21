@@ -1,5 +1,5 @@
-import { Dropdown, type DropdownItem } from '@/components/common/Dropdown';
-import styles from '@/components/common/Navbar/NavBarItem/NavBarItem.module.scss';
+import { Dropdown, type DropdownItem } from '@/components/controls/Dropdown';
+import styles from '@/components/controls/Navbar/NavBarItem/NavBarItem.module.scss';
 import React from 'react';
 
 interface NavBarItemProps {

@@ -1,0 +1,142 @@
+.wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.label {
+  color: #57534e;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  min-height: 48px;
+  padding: 0 var(--spacing-16);
+  color: #1c1917;
+  background: #f8f7f6;
+  border: 1px solid transparent;
+  border-radius: var(--radius-12);
+  cursor: text;
+  transition:
+    background-color 140ms ease-in-out,
+    border-color 140ms ease-in-out,
+    box-shadow 140ms ease-in-out;
+
+  &:hover {
+    background: #f4f1ef;
+  }
+
+  &:focus-within {
+    background: #ffffff;
+    border-color: #fa8673;
+    box-shadow: 0 0 0 3px rgb(250 134 115 / 16%);
+  }
+
+  input {
+    flex: 1;
+    min-width: 0;
+    height: 24px;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    background: transparent;
+    border: 0;
+    outline: none;
+
+    &::placeholder {
+      color: #a8a29e;
+    }
+
+    &[type='search'] {
+      appearance: textfield;
+    }
+
+    &[type='search']::-webkit-search-cancel-button {
+      appearance: none;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.hasError {
+  border-color: #ef4444;
+
+  &:focus-within {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgb(239 68 68 / 14%);
+  }
+}
+
+.adornmentIcon,
+.iconButton svg,
+.errorMessage svg {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+}
+
+.adornmentIcon {
+  color: #78716c;
+}
+
+.iconButton {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: #78716c;
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-8);
+  cursor: pointer;
+  transition:
+    background-color 140ms ease-in-out,
+    color 140ms ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    color: #1c1917;
+    background: rgb(28 25 23 / 6%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgb(250 134 115 / 36%);
+    outline-offset: 2px;
+  }
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding-top: var(--spacing-4);
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+
+  svg {
+    color: currentColor;
+  }
+}

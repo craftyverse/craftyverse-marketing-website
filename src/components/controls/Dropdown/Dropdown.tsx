@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '@/components/common/Dropdown/Dropdown.module.scss';
+import styles from '@/components/controls/Dropdown/Dropdown.module.scss';
 import {
   ChevronDown,
   Palette,

@@ -1,4 +1,4 @@
-import styles from '@/components/common/Button/Button.module.scss';
+import styles from '@/components/controls/Button/Button.module.scss';
 import React from 'react';
 
 interface ButtonBaseProps {
