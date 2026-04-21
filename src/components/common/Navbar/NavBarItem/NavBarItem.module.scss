@@ -1,0 +1,19 @@
+.navBarItem {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  color: inherit;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.dropdownIcon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+}
