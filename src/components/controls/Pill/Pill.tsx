@@ -7,7 +7,7 @@ export interface PillProps extends Omit<
 > {
   title: string;
   icon?: React.ReactNode;
-  variant?: 'neutral' | 'waitlist';
+  variant?: 'neutral' | 'accent' | 'overlay';
 }
 
 export interface PillDotIconProps extends Omit<
@@ -54,7 +54,8 @@ export const Pill: React.FC<PillProps> = ({
       {...spanProps}
       className={classNames(
         styles.pill,
-        variant === 'waitlist' ? styles.waitlist : undefined,
+        variant === 'accent' ? styles.accent : undefined,
+        variant === 'overlay' ? styles.overlay : undefined,
         className,
       )}
     >

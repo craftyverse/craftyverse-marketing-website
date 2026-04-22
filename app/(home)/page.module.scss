@@ -156,7 +156,54 @@
   }
 }
 
+.benefitSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-24);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--spacing-40) var(--spacing-24);
+  .benefitHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-24);
+    height: 344px;
+    min-width: 1216px;
+    padding: var(--spacing-24);
+    background-color: var(--color-primary);
+    border-radius: var(--radius-24);
+    margin-bottom: 80px;
+
+    & > h1,
+    p {
+      color: white;
+    }
+
+    & > p {
+      max-width: 768px;
+      text-align: center;
+    }
+  }
+
+  .cardGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-24);
+    width: 100%;
+  }
+}
+
 @media (max-width: 767px) {
+  .benefitSection {
+    .cardGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   .mainTitle {
     .headline {
       max-width: 560px;
