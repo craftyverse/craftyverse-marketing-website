@@ -7,28 +7,28 @@ const footerLinks = [
     heading: 'Product',
     links: [
       { label: 'For Students', href: '/solutions/students' },
-      { label: 'For Parents', href: '/solutions/parents' },
-      { label: 'For Schools', href: '/solutions/schools' },
-      { label: 'Pricing', href: '/pricing' },
+      // { label: 'For Parents', href: '/solutions/parents' },
+      // { label: 'For Schools', href: '/solutions/schools' },
+      // { label: 'Pricing', href: '/pricing' },
     ],
   },
-  {
-    heading: 'Company',
-    links: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Careers', href: '/careers' },
-      { label: 'Blog', href: '/blog' },
-      { label: 'Contact', href: '/contact' },
-    ],
-  },
-  {
-    heading: 'Legal',
-    links: [
-      { label: 'Privacy Policy', href: '/privacy' },
-      { label: 'Terms of Service', href: '/terms' },
-      { label: 'Security', href: '/security' },
-    ],
-  },
+  // {
+  //   heading: 'Company',
+  //   links: [
+  //     { label: 'About Us', href: '/about' },
+  //     { label: 'Careers', href: '/careers' },
+  //     { label: 'Blog', href: '/blog' },
+  //     { label: 'Contact', href: '/contact' },
+  //   ],
+  // },
+  // {
+  //   heading: 'Legal',
+  //   links: [
+  //     { label: 'Privacy Policy', href: '/privacy' },
+  //     { label: 'Terms of Service', href: '/terms' },
+  //     { label: 'Security', href: '/security' },
+  //   ],
+  // },
 ];
 
 // const socialLinks = [

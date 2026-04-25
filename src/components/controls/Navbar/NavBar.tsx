@@ -26,18 +26,18 @@ const navItems: NavItem[] = [
         title: 'For Students',
         redirectTo: '/students',
       },
-      {
-        title: 'For Teachers',
-        redirectTo: '/solutions/creators',
-      },
-      {
-        title: 'For Parents',
-        redirectTo: '/solutions/teams',
-      },
-      {
-        title: 'For Schools',
-        redirectTo: '/solutions/schools',
-      },
+      // {
+      //   title: 'For Teachers',
+      //   redirectTo: '/solutions/creators',
+      // },
+      // {
+      //   title: 'For Parents',
+      //   redirectTo: '/solutions/teams',
+      // },
+      // {
+      //   title: 'For Schools',
+      //   redirectTo: '/solutions/schools',
+      // },
     ],
   },
   {

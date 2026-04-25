@@ -32,6 +32,7 @@ export const JoinWaitlistForm: React.FC<JoinWaitlistFormProps> = ({
   onSubmit,
 }) => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const methods = useForm<JoinWaitlistFormValues>({
     defaultValues: {
       firstName: '',
@@ -50,9 +51,33 @@ export const JoinWaitlistForm: React.FC<JoinWaitlistFormProps> = ({
   const handleSubmit: SubmitHandler<JoinWaitlistFormValues> = async (
     values,
   ) => {
-    await onSubmit?.(values);
-    setHasSubmitted(true);
-    methods.reset();
+    try {
+      setSubmitError(null);
+      setHasSubmitted(false);
+
+      if (onSubmit) {
+        await onSubmit(values);
+      } else {
+        const response = await fetch('/api/waitlist', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(values),
+        });
+
+        if (!response.ok) {
+          throw new Error('Submission failed');
+        }
+      }
+
+      setHasSubmitted(true);
+      methods.reset();
+    } catch {
+      setSubmitError(
+        'Could not join the waitlist right now. Please try again shortly.',
+      );
+    }
   };
 
   return (
@@ -133,6 +158,7 @@ export const JoinWaitlistForm: React.FC<JoinWaitlistFormProps> = ({
         icon={<ArrowRight />}
         disabled={isSubmitting}
       />
+      {submitError && <p className={styles.errorMessage}>{submitError}</p>}
       {hasSubmitted && (
         <p className={styles.successMessage}>
           You are on the waitlist. We will be in touch soon.
