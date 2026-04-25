@@ -24,8 +24,28 @@ const getEnvVar = (key: string) => {
   return value;
 };
 
-const normalizePrivateKey = (privateKey: string) =>
-  privateKey.includes('\\n') ? privateKey.replace(/\\n/g, '\n') : privateKey;
+const normalizePrivateKey = (privateKey: string) => {
+  const trimmed = privateKey.trim();
+  const unquoted =
+    (trimmed.startsWith('"') && trimmed.endsWith('"')) ||
+    (trimmed.startsWith("'") && trimmed.endsWith("'"))
+      ? trimmed.slice(1, -1)
+      : trimmed;
+
+  const normalized = unquoted.replace(/\\n/g, '\n').replace(/\r\n/g, '\n');
+
+  // Guardrail: surface a targeted error if the key cannot be decoded as PEM.
+  if (
+    !normalized.includes('-----BEGIN PRIVATE KEY-----') ||
+    !normalized.includes('-----END PRIVATE KEY-----')
+  ) {
+    throw new Error(
+      'Invalid GOOGLE_PRIVATE_KEY format. Ensure it is a full PEM key with BEGIN/END lines and newline separators.',
+    );
+  }
+
+  return normalized;
+};
 
 const parsePayload = (body: unknown): WaitlistPayload | null => {
   if (!body || typeof body !== 'object') {
