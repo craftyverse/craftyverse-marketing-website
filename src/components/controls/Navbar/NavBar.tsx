@@ -4,6 +4,7 @@ import styles from '@/components/controls/Navbar/Navbar.module.scss';
 import { NavBarItem } from '@/components/controls/Navbar/NavBarItem/NavBarItem';
 import { Logo } from '@/illustrations/Logo';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import React from 'react';
 
 interface NavItem {
@@ -54,7 +55,9 @@ export const NavBar: React.FC = () => {
   return (
     <header className={styles.navBarContainer}>
       <div className={styles.navBarContent}>
-        <Logo className={styles.logo} />
+        <Link href="/" aria-label="Go to home page" className={styles.logoLink}>
+          <Logo className={styles.logo} />
+        </Link>
         <nav className={styles.navItems} aria-label="Primary navigation">
           <ul className={styles.navItemList} role="list">
             {navItems.map((navItem) => (
@@ -68,7 +71,7 @@ export const NavBar: React.FC = () => {
       <Button
         text="Join Waitlist"
         icon={<ArrowRight />}
-        href="/waitlist"
+        href="#"
         size="small"
       />
     </header>

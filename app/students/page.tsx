@@ -186,7 +186,7 @@ export default function StudentPage() {
         <Button
           text="Join Waitlist"
           icon={<ArrowRight />}
-          href="/waitlist"
+          href="#join-waitlist-form"
           size="small"
         />
       </section>
@@ -231,7 +231,7 @@ export default function StudentPage() {
         </p>
         <ComparisonTable columns={comparisonColumns} rows={comparisonRows} />
       </section>
-      <section className={styles.waitlistSection}>
+      <section id="join-waitlist-form" className={styles.waitlistSection}>
         <div className={styles.waitlistCard}>
           <Pill title="Join Waitlist" icon={<Rocket />} variant="accent" />
           <h2 className={styles.waitlistTitle}>

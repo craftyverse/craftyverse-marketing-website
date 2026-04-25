@@ -19,6 +19,13 @@
   max-height: 100%;
 }
 
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  height: 100%;
+}
+
 .navItems {
   display: flex;
   align-items: center;

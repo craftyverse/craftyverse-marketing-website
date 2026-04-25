@@ -4,13 +4,14 @@ import { Pill, PillDotIcon } from '@/components/controls/Pill';
 import { JoinWaitlistForm } from '@/components/JoinWaitlistForm';
 import { Card } from '@/components/elements/Card';
 import styles from '@/app/(home)/page.module.scss';
+import { Button } from '@/components/controls/Button';
 import {
+  ArrowRight,
   BookOpen,
   Building2,
   Check,
   GraduationCap,
   Layers,
-  Rocket,
   Users,
 } from 'lucide-react';
 
@@ -34,8 +35,8 @@ const audienceCards = [
       'Gain deep insights into student performance, communicate with parents seamlessly, and focus more on teaching, less on administration.',
     ],
     tags: ['Lesson Builder', 'Grade Book', 'Analytics', 'Communication'],
-    ctaText: 'Find out more',
-    ctaHref: '/teachers',
+    ctaText: 'Comming soon',
+    ctaHref: '#',
   },
   {
     icon: <Building2 />,
@@ -45,8 +46,8 @@ const audienceCards = [
       'From enrolment to reporting, manage everything in one place with real-time data and compliance-ready tools built for modern education.',
     ],
     tags: ['Admin Portal', 'Enrolment', 'Reporting', 'Staff Management'],
-    ctaText: 'Find out more',
-    ctaHref: '/schools',
+    ctaText: 'Comming soon',
+    ctaHref: '#',
   },
   {
     icon: <Users />,
@@ -56,8 +57,8 @@ const audienceCards = [
       "Communicate directly with teachers, celebrate milestones, and support your child's learning journey from wherever you are.",
     ],
     tags: ['Progress Reports', 'Attendance', 'Messaging', 'Milestone Tracking'],
-    ctaText: 'Find out more',
-    ctaHref: '/parents',
+    ctaText: 'Comming soon',
+    ctaHref: '#',
   },
 ];
 
@@ -83,7 +84,12 @@ export default function HomePage() {
           A personalised companion connecting students, teachers, parents, and
           schools into one seamless daily workflow.
         </p>
-        <Pill title="Join Waitlist" icon={<Rocket />} variant="accent" />
+        <Button
+          text="Join Waitlist"
+          icon={<ArrowRight />}
+          href="#join-waitlist-form"
+          size="small"
+        />
         <h2 className={styles.journeyTitle}>
           Start your journey to academic excellence
         </h2>
@@ -91,7 +97,7 @@ export default function HomePage() {
           Join the waitlist for early access to Craftyverse. Be among the first
           to experience a more connected way to learn, plan, and grow.
         </p>
-        <div className={styles.waitlistFormLayer}>
+        <div id="join-waitlist-form" className={styles.waitlistFormLayer}>
           <JoinWaitlistForm />
         </div>
         <div className={styles.waitlistDivider} aria-hidden="true" />
