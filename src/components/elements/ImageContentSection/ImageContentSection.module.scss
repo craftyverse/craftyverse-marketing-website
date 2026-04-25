@@ -1,0 +1,116 @@
+.section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  padding: 64px 0;
+  width: 100%;
+}
+
+.imageRight {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  .imageWrap {
+    order: 2;
+  }
+
+  .content {
+    order: 1;
+  }
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: var(--radius-24);
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-24);
+}
+
+.title {
+  color: #1c1917;
+
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 111.111% */
+}
+
+.description {
+  margin: 0;
+  color: #57534e;
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  color: #44403c;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.listIcon {
+  width: 16px;
+  height: 16px;
+  color: #f48771;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .section,
+  .imageRight {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-24);
+  }
+
+  .imageRight {
+    .imageWrap,
+    .content {
+      order: initial;
+    }
+  }
+
+  .title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -1,5 +1,6 @@
 import { Dropdown, type DropdownItem } from '@/components/controls/Dropdown';
 import styles from '@/components/controls/Navbar/NavBarItem/NavBarItem.module.scss';
+import Link from 'next/link';
 import React from 'react';
 
 interface NavBarItemProps {
@@ -26,8 +27,8 @@ export const NavBarItem: React.FC<NavBarItemProps> = (
   }
 
   return (
-    <a className={styles.navBarItem} href={redirectTo}>
+    <Link className={styles.navBarItem} href={redirectTo ?? '/'}>
       <span>{title}</span>
-    </a>
+    </Link>
   );
 };

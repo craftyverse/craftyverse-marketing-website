@@ -24,7 +24,7 @@ const navItems: NavItem[] = [
     dropdownItems: [
       {
         title: 'For Students',
-        redirectTo: '/solutions/schools',
+        redirectTo: '/students',
       },
       {
         title: 'For Teachers',

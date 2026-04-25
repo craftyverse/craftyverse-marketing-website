@@ -1,0 +1,447 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: var(--spacing-64);
+
+  .titleSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 700px;
+
+    .headline {
+      padding-top: var(--spacing-32);
+      max-width: 1050px;
+      margin: 0;
+      color: #1c1917;
+      font-family: var(--font-primary);
+      font-size: 72px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 88px;
+      letter-spacing: 0;
+      text-align: center;
+      background: linear-gradient(90deg, #1c1917 0%, #a8a29e 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subHeadline {
+      max-width: 1050px;
+      margin: 0;
+      color: #1c1917;
+      font-family: var(--font-primary);
+      font-size: 72px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 88px;
+      letter-spacing: 0;
+      text-align: center;
+      background: #f48771;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .supportingText {
+      padding-top: var(--spacing-32);
+      text-align: center;
+      width: 745.7px;
+      padding-bottom: var(--spacing-32);
+    }
+  }
+
+  .featureSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-12);
+    width: 100%;
+    margin: 0 auto;
+    padding: 96px 80px;
+    background-color: #f8f7f6;
+  }
+
+  .featureTitle {
+    margin: 0;
+    color: #1c1917;
+    font-family: var(--font-primary);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  .featureDescription {
+    margin: 0;
+    max-width: 640px;
+    color: #57534e;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .featureGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spacing-24);
+    width: min(1280px, 100%);
+    margin-top: var(--spacing-40);
+  }
+
+  .syncSection {
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    padding: var(--spacing-64) var(--spacing-24);
+  }
+
+  .workflowSection {
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    padding: 96px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-12);
+  }
+
+  .workflowSteps {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-40);
+  }
+
+  .workflowBadgeNumber {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: #f48771;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .workflowTitle {
+    margin: 0;
+    color: #1c1917;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .workflowDescription {
+    margin: 0;
+    max-width: 640px;
+    color: #57534e;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  .comparisonSection {
+    width: 100%;
+    margin: 0 auto;
+    padding: 96px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-12);
+    background-color: #f8f7f6;
+  }
+
+  .comparisonTitle {
+    margin: 0;
+    color: #1c1917;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .comparisonDescription {
+    margin: 0;
+    max-width: 640px;
+    color: #57534e;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    padding-bottom: 64px;
+  }
+
+  .waitlistSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 96px 0;
+  }
+
+  .waitlistCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-24);
+    width: 894px;
+    min-height: 782px;
+    padding: 96px 56px 48px;
+    border: 1px solid #e7e5e4;
+    border-radius: var(--radius-24);
+    background: linear-gradient(
+      135deg,
+      rgba(244, 135, 113, 0.05) 0%,
+      rgba(244, 135, 113, 0) 100%
+    );
+  }
+
+  .waitlistTitle {
+    margin: 0;
+    max-width: 760px;
+    color: #1c1917;
+    text-align: center;
+    font-family: Inter, var(--font-primary), sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .waitlistDescription {
+    margin: 0;
+    max-width: 700px;
+    color: #57534e;
+    text-align: center;
+    font-family: Inter, var(--font-primary), sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  .waitlistFormLayer {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+  }
+
+  .waitlistDivider {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 1px;
+    width: min(100%, 1050px);
+    height: 1px;
+    margin-top: var(--spacing-16);
+    background: #e7e5e4;
+  }
+
+  .waitlistBenefitsContainer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: min(100%, 1120px);
+    padding: 0;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-32);
+  }
+
+  .waitlistBenefit {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: var(--spacing-8);
+    color: #57534e;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  .waitlistBenefitIcon {
+    display: inline-flex;
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #22c55e;
+    color: #ffffff;
+
+    svg {
+      width: 10px;
+      height: 10px;
+      stroke-width: 4;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .pageContainer {
+    .titleSection {
+      .headline,
+      .subHeadline {
+        font-size: 56px;
+        line-height: 68px;
+      }
+
+      .supportingText {
+        width: min(745px, calc(100% - var(--spacing-48)));
+      }
+    }
+
+    .featureSection {
+      .featureTitle,
+      .featureDescription {
+        text-align: center;
+      }
+    }
+
+    .featureGrid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .syncSection {
+      padding: var(--spacing-48) var(--spacing-24);
+    }
+
+    .workflowSection {
+      padding: 64px 24px;
+    }
+
+    .comparisonSection {
+      padding: 0 24px 64px;
+    }
+
+    .waitlistSection {
+      padding: 64px 24px;
+    }
+
+    .waitlistCard {
+      padding: 64px 24px 40px;
+    }
+
+    .waitlistTitle {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    .waitlistDescription {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    .titleSection {
+      min-height: 560px;
+
+      .headline,
+      .subHeadline {
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+
+    .featureSection {
+      padding: var(--spacing-48) var(--spacing-16);
+      gap: var(--spacing-8);
+    }
+
+    .featureGrid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-16);
+      margin-top: var(--spacing-24);
+    }
+
+    .syncSection {
+      padding: var(--spacing-40) var(--spacing-16);
+    }
+
+    .workflowSection {
+      padding: 40px 16px;
+      gap: var(--spacing-8);
+    }
+
+    .workflowSteps {
+      gap: var(--spacing-24);
+    }
+
+    .comparisonSection {
+      padding: 0 16px 40px;
+      gap: var(--spacing-8);
+    }
+
+    .waitlistSection {
+      padding: 40px 16px;
+    }
+
+    .waitlistCard {
+      padding: 40px 16px 28px;
+      gap: var(--spacing-16);
+    }
+
+    .waitlistTitle {
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    .waitlistDescription {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    .waitlistBenefitsContainer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-16);
+      width: min(100%, 560px);
+      margin-top: var(--spacing-24);
+    }
+
+    .waitlistBenefit {
+      font-size: 14px;
+      line-height: 20px;
+      white-space: normal;
+    }
+
+    .waitlistBenefitIcon {
+      width: 28px;
+      height: 28px;
+      flex-basis: 28px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

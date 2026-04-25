@@ -14,6 +14,7 @@ import {
   type Transition,
   type Variants,
 } from 'framer-motion';
+import Link from 'next/link';
 import React, { useEffect, useId, useRef, useState } from 'react';
 
 export type DropdownItemIcon = 'palette' | 'school' | 'users';
@@ -144,7 +145,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
               return (
                 <li key={itemKey} role="none">
-                  <a
+                  <Link
                     className={classNames(
                       styles.menuItem,
                       item.isDanger && styles.menuItemDanger,
@@ -161,7 +162,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
                       />
                     )}
                     <span>{item.title}</span>
-                  </a>
+                  </Link>
                 </li>
               );
             })}

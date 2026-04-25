@@ -1,4 +1,5 @@
 import styles from '@/components/controls/Button/Button.module.scss';
+import Link from 'next/link';
 import React from 'react';
 
 interface ButtonBaseProps {
@@ -37,6 +38,8 @@ const renderButtonContent = (text: string, icon?: React.ReactNode) => (
 const isAnchorButton = (props: ButtonProps): props is ButtonAsAnchorProps =>
   typeof props.href === 'string';
 
+const isInternalHref = (href: string) => href.startsWith('/');
+
 export const Button: React.FC<ButtonProps> = (props) => {
   if (isAnchorButton(props)) {
     const {
@@ -48,17 +51,26 @@ export const Button: React.FC<ButtonProps> = (props) => {
       ...anchorProps
     } = props;
 
+    const commonProps = {
+      ...anchorProps,
+      className: classNames(
+        styles.button,
+        size === 'small' ? styles.small : undefined,
+        className,
+      ),
+      'aria-label': props['aria-label'] ?? text,
+    };
+
+    if (isInternalHref(href)) {
+      return (
+        <Link {...commonProps} href={href}>
+          {renderButtonContent(text, icon)}
+        </Link>
+      );
+    }
+
     return (
-      <a
-        {...anchorProps}
-        href={href}
-        className={classNames(
-          styles.button,
-          size === 'small' ? styles.small : undefined,
-          className,
-        )}
-        aria-label={props['aria-label'] ?? text}
-      >
+      <a {...commonProps} href={href}>
         {renderButtonContent(text, icon)}
       </a>
     );
