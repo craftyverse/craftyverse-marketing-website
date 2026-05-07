@@ -9,7 +9,6 @@ import {
   ArrowRight,
   BookOpen,
   Building2,
-  Check,
   GraduationCap,
   Layers,
   Users,
@@ -20,10 +19,15 @@ const audienceCards = [
     icon: <GraduationCap />,
     title: 'Students',
     description: [
-      'Your personalized learning companion that adapts to your unique style. Track assignments, monitor progress, and achieve your academic goals with AI-powered insights.',
+      'Your personalised learning companion that adapts to your unique style. Track assignments, monitor progress, and achieve your academic goals with personalised insights.',
       'Smart scheduling, collaborative tools, and real-time feedback help you stay organized and excel in every subject.',
     ],
-    tags: ['Task Management', 'Study Planner', 'Progress Tracking', 'AI Tutor'],
+    tags: [
+      'Task Management',
+      'Study Planner',
+      'Progress Tracking',
+      'Personal Tutor',
+    ],
     ctaText: 'Find out more',
     ctaHref: '/students',
   },
@@ -62,12 +66,6 @@ const audienceCards = [
   },
 ];
 
-const waitlistBenefits = [
-  'No credit card required',
-  'Waitlist priority',
-  'Exclusive beta features',
-];
-
 export default function HomePage() {
   return (
     <main>
@@ -101,22 +99,9 @@ export default function HomePage() {
           <JoinWaitlistForm />
         </div>
         <div className={styles.waitlistDivider} aria-hidden="true" />
-        <ul
-          className={styles.waitlistBenefitsContainer}
-          aria-label="Waitlist benefits"
-        >
-          {waitlistBenefits.map((benefit) => (
-            <li key={benefit} className={styles.waitlistBenefit}>
-              <span className={styles.waitlistBenefitIcon}>
-                <Check
-                  aria-hidden="true"
-                  className={styles.waitlistBenefitIcon}
-                />
-              </span>
-              <span>{benefit}</span>
-            </li>
-          ))}
-        </ul>
+        <p className={styles.waitlistBenefit}>
+          By joining, you agree to our Terms & Privacy Policy
+        </p>
       </section>
       <section className={styles.benefitSection}>
         <div className={styles.benefitHeader}>

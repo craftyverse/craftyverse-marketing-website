@@ -1,15 +1,27 @@
+@use '../../../../styles/breakpoints' as bp;
+
 .navBarContainer {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   padding: 0 var(--spacing-24);
+}
 
-  .navBarContent {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-32);
-    width: 100vw;
-    height: 96px;
-  }
+.navBarTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 96px;
+  gap: var(--spacing-16);
+}
+
+.navBarContent {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  gap: var(--spacing-32);
+  width: 100%;
+  min-height: 96px;
 }
 
 .logo {
@@ -35,4 +47,99 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-24);
+}
+
+.desktopCta {
+  display: inline-flex;
+}
+
+.mobileMenuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e7e5e4;
+  border-radius: var(--radius-12);
+  background: #ffffff;
+  color: #1c1917;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.mobileMenuPanel {
+  display: none;
+  width: 100%;
+  margin-bottom: var(--spacing-16);
+  padding: var(--spacing-16);
+  border: 1px solid #e7e5e4;
+  border-radius: var(--radius-16);
+  background: #ffffff;
+}
+
+.mobileMenuOpen {
+  display: block;
+}
+
+.mobileNavItemList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobileNavLink {
+  display: flex;
+  width: 100%;
+  padding: var(--spacing-8) 0;
+  color: #1c1917;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.mobileMenuCta {
+  margin-top: var(--spacing-16);
+  width: 100%;
+}
+
+@media (max-width: #{bp.$breakpoint-mobile}) {
+  .navBarContainer {
+    padding: 0 var(--spacing-16);
+  }
+
+  .navBarTopRow,
+  .navBarContent {
+    min-height: 80px;
+  }
+
+  .navBarContent {
+    width: 100%;
+    gap: 0;
+  }
+
+  .logo {
+    height: 32px;
+    width: auto;
+  }
+
+  .logoLink {
+    height: auto;
+  }
+
+  .navItems,
+  .desktopCta {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: inline-flex;
+    flex: 0 0 auto;
+  }
 }

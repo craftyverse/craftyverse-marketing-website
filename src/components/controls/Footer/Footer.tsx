@@ -6,7 +6,7 @@ const footerLinks = [
   {
     heading: 'Product',
     links: [
-      { label: 'For Students', href: '/solutions/students' },
+      { label: 'For Students', href: '/students' },
       // { label: 'For Parents', href: '/solutions/parents' },
       // { label: 'For Schools', href: '/solutions/schools' },
       // { label: 'Pricing', href: '/pricing' },
@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
         <div className={styles.divider} aria-hidden="true" />
         <div className={styles.bottom}>
           <p className={styles.copyright}>
-            © 2024 Craftyverse Inc. All rights reserved.
+            © 2024 Craftyverse Pty Ltd. All rights reserved.
           </p>
           {/* <div className={styles.social}>
             {socialLinks.map((s) => (

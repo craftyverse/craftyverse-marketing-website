@@ -1,2 +1,7 @@
 @use './core-variables';
 @use './reset';
+
+html,
+body {
+  max-width: 100%;
+}

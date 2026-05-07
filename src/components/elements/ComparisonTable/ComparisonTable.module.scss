@@ -1,3 +1,5 @@
+@use '../../../../styles/breakpoints' as bp;
+
 .container {
   width: min(1280px, 100%);
   overflow-x: auto;
@@ -92,16 +94,71 @@
   background: #facc15;
 }
 
-@media (max-width: 768px) {
-  .table {
-    th,
-    td {
-      padding: 16px 18px;
-    }
+.mobileCardList {
+  display: none;
+}
+
+@media (max-width: #{bp.$breakpoint-mobile}) {
+  .container {
+    overflow: visible;
+    border: none;
+    background: transparent;
   }
 
-  .featureCell {
-    font-size: 16px;
+  .table {
+    display: none;
+  }
+
+  .mobileCardList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+  }
+
+  .mobileCard {
+    border: 1px solid #ede9e8;
+    border-radius: var(--radius-16);
+    background: #ffffff;
+    padding: var(--spacing-16);
+  }
+
+  .mobileFeatureTitle {
+    margin: 0 0 var(--spacing-12);
+    color: #1c1917;
+    font-size: 18px;
     line-height: 24px;
+    font-weight: 600;
+  }
+
+  .mobileStatusList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+  }
+
+  .mobileStatusItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-16);
+  }
+
+  .mobileColumnLabel {
+    color: #57534e;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+  .mobileStatusValue {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-8);
+    color: #57534e;
+    font-size: 14px;
+    line-height: 20px;
   }
 }

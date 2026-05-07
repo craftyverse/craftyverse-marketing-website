@@ -1,3 +1,5 @@
+@use '../../../../styles/breakpoints' as bp;
+
 .card {
   display: flex;
   flex-direction: column;
@@ -43,4 +45,21 @@
   font-style: normal;
   font-weight: 400;
   line-height: 22.75px;
+}
+
+@media (max-width: #{bp.$breakpoint-mobile}) {
+  .card {
+    padding: var(--spacing-24);
+    gap: var(--spacing-12);
+  }
+
+  .iconWrap {
+    width: 56px;
+    height: 56px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }

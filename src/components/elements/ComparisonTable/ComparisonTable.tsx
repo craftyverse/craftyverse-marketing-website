@@ -90,6 +90,41 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({
           ))}
         </tbody>
       </table>
+      <div className={styles.mobileCardList}>
+        {rows.map((row) => (
+          <article key={row.feature} className={styles.mobileCard}>
+            <h3 className={styles.mobileFeatureTitle}>{row.feature}</h3>
+            <ul className={styles.mobileStatusList}>
+              {columns.map((column) => {
+                const status = row.values[column.key] ?? 'not-included';
+                return (
+                  <li
+                    key={`${row.feature}-${column.key}`}
+                    className={styles.mobileStatusItem}
+                  >
+                    <span className={styles.mobileColumnLabel}>
+                      {column.label}
+                    </span>
+                    <span className={styles.mobileStatusValue}>
+                      <span
+                        className={classNames(
+                          styles.statusIcon,
+                          styles[status],
+                        )}
+                        role="img"
+                        aria-label={statusLabelMap[status]}
+                      >
+                        {statusIconMap[status]}
+                      </span>
+                      <span>{statusLabelMap[status]}</span>
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          </article>
+        ))}
+      </div>
     </div>
   );
 };
