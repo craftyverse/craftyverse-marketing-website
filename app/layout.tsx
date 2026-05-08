@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 
 export const metadata = {
   title: 'Craftyverse',
-  description: 'Marketing website for the Craftyverse platform',
+  description: 'The all-inclusive learning operating system',
 };
 
 type RootLayoutProps = {

@@ -18,7 +18,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    title: 'Programs',
+    title: 'Home',
     redirectTo: '/',
   },
   {
